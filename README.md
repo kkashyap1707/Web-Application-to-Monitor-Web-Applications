@@ -1,5 +1,6 @@
-<img src="images/logo.png" align="right" style="height: 64px"/>
-# Web-Application-to-Monitor-Web-Applications
+<img src="images/logo.png" align="right" style="height: 24px"/>
+
+## Web-Application-to-Monitor-Web-Applications
 
 
 >The main purpose of this project is to learn the development of web applications using Django – a python framework
