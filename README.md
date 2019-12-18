@@ -1,8 +1,6 @@
-<img src="images/logo.png" align="right" style="height: 24px"/>
+<img src="images/logo.png" align="right" style="height: 64px"/>
 
-## Web-Application-to-Monitor-Web-Applications
-
-
+# Web Application to monitor Websites
 >The main purpose of this project is to learn the development of web applications using Django – a python framework
 And to grow understanding of Amazon Cloud – Amazon Web Services (AWS) Lambda functions, compute instances and storage buckets. 
 The goal was to develop an application that could monitor websites for their uptime and performance and record it and show graphs based on it. 
