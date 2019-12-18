@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <style>
+      body{
+        background-image: linear-gradient(to right, rgba(255,0,0,0), rgba(255,0,0,1));
+        
+      }
+      
+        h1{
+          color: black;
+          font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+          font-style: italic;
+          font-size: 70;
+        }
+    </style>
+  </head>
+  <body>
+      {% load filter_strings %}
+    <div class="container">
+      <h1 align="center">List of Websites</h1>
+      <br>
+      <div class="row">
+      {% for item1 in url %}
+      <div class ="col-sm-6">
+      <div class="card" style="width: 32rem;">
+        <div class="card-body back">
+          <h5 class="card-title">Url Information</h5>
+          <table class="table">
+            <tr>
+              <th scope="col">URL</th>
+              <td scope="col">{{ item1 }}</td>
+            </tr>
+            <tr>
+               <th scope="row">STATUS</th>
+               <td>{{ status|get_at_index:forloop.counter0 }}</td>
+            </tr>
+            <tr>
+              <th scope="row">ACCESS</th>
+              <td>{{ access|get_at_index:forloop.counter0 }}</td>
+            </tr>
+            <tr>
+              <th scope="row">SUBSCRIBER</th>
+              <td>{{ subscriber|get_at_index:forloop.counter0 }}</td>
+            </tr>
+            <tr>
+              <th scope="row">CRON</th>
+              <td>{{ cron|get_at_index:forloop.counter0 }}</td>
+            </tr>
+          </table>
+        </div>
+      </div>
+      </div>
+      <br>
+        {% endfor %}
+      </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+  </body>
+</html>
